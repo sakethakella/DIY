@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Report</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://cdn.jim-nielsen.com/ios/512/weather-2021-12-07.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+    <section class="top-nav">
+        <div>
+            <img src="https://cdn.jim-nielsen.com/ios/512/weather-2021-12-07.png" style="width:3vw;height:3vw;border-radius: 50%;">
+        </div>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+        <div class='menu-button'></div>
+      </label>
+        <ul class="menu">
+          <li><a href="#Temperature">Temperature</a></li>
+          <li><a href="#Humidity">Humidity</a></li>
+          <li><a href="#rainfall">Rainfall</a></li>
+          <li><a href="#footer">footer</a></li>
+        </ul>
+    </section>
+    <div class="image_pic">
+        <div class="report">
+            <div class="report_elements">
+            <h1>Weather Report</h1>
+        </div>
+        </div>
+    </div>
+    <div class="Temperature" id="Temperature">
+       <div class="temperature_elements">
+         <h1>Temperature readings</h1>
+       </div>
+       <div class="temperature_elements">
+        <iframe width="500" height="300" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2464103/widgets/817390"></iframe>
+    </div>
+    <div class="temperature_elements">
+        <iframe width="500" height="300" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2464103/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+    </div>
+    </div>
+    <div class="Humidity">
+        <div class="Humidity_elements"><h1>Humidity Readings</h1></div>
+        <div class="Humidity_elements"><iframe width="500" height="300" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2464103/widgets/817391"></iframe>
+        </div>
+        <div class="Humidity_elements" id="Humidity"><iframe width="500" height="300" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2464103/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+        </div>
+    </div>
+    <div class="rainfall">
+        <div class="rainfall_elements"><h1>Rainfall Readings</h1></div>
+        <div class="rainfall_elements" id="rainfall"><iframe width="500" height="300" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2464103/widgets/817401"></iframe>
+        </div>
+        <div class="rainfall_elements"><iframe width="500" height="300" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2464103/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer_elements"></div>
+        <div class="footer_elements"></div>
+    </div>
+    <div class="footer">
+        <div class="footer_elements">
+            <p>This project involves retrieving data from temperature and humidity sensors, which is then utilized to automate home weather control. The collected data is elegantly presented on our website for user monitoring and analysis.</p>
+        </div>
+        <div class="footer_elements" id = "footer">
+            <p>team members:</p>
+            <p>Saketh</p>
+            <p>Naveen</p>
+            <p>Athika</p>
+            <p>Komali</p>
+        </div>
+    </div>
+</body>
+</html>
